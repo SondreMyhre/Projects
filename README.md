@@ -5,7 +5,7 @@ A small collection of machine learning,  computer vision, and mathematics projec
 ## Featured projects
 - **Njord_Perception** Real-time buoy detection for an Autonomous Surface Vehicle (ASV) using ZED stereo camera, YOLOv8, and ROS2.
 
-- **Snow_pole_detection** Mini-project from TDT4265: YOLO-based detection of snow poles using RGB and LiDAR-derived images.
+- **Snow_pole_detection** Mini-project from TDT4265: YOLO-based detection of snow poles using RGB and LiDAR images.
 
 - **blackjack.ipynb** Reinforcement learning agent for OpenAI Gymnasium Blackjack.
 
