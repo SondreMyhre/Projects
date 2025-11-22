@@ -4,6 +4,14 @@ import numpy as np
 import sys
 import math
 
+"""
+Color-threshold baseline for buoy detection (pre-ML).
+
+Masks red/green regions in BGR, removes noise, finds contours,
+then queries depth + rough bearing from ZED.
+Mostly kept for comparison against YOLO pipeline.
+"""
+
 def main():
     # Define filter values using BGR values
     red_Filter_Lower = np.array([0, 0, 75])
@@ -51,7 +59,7 @@ def main():
 
             # Detect and display objects
             detect_and_display_objects(red_Mask, depth, "Red Object", cv_img, (0,0,255))
-            #detect_and_display_objects(red_Mask, image_depth, "Red Object", cv_img, (0,0,255)) #Gir vektor istede for avstand i [mm]
+            # detect_and_display_objects(red_Mask, image_depth, "Red Object", cv_img, (0,0,255)) #Gir vektor istede for avstand i [mm]
             detect_and_display_objects(green_Mask, depth, "Green Object", cv_img, (0,255,0))
             
             cv2.imshow("Camera View", cv_img)
